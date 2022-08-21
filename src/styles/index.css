@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: ubuntu, Proxima Nova, system-ui, sans-serif;
+  }
+
+  :root {
+    --color-primary: #4ade80;
+    --color-secondary: #fffffe;
+    --color-text-primary: #fffffe;
+    --color-text-secondary: #000000;
+  }
+}
+
+@font-face {
+  font-family: ubuntu;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/ubuntu/Ubuntu-Regular.ttf");
+}
+
+* {
+  font-family: ubuntu, sans-serif;
+  box-sizing: border-box;
+}

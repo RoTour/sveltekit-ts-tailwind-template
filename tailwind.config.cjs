@@ -5,7 +5,17 @@ module.exports = {
     container: {
       center: true,
     },
-    extend: {},
+    extend: {
+      colors: {
+        'primary': 'var(--color-primary)',
+        'secondary': 'var(--color-secondary)',
+        'primary-text': 'var(--color-text-primary)',
+        'secondary-text': 'var(--color-text-secondary)',
+      },
+      // fontFamily: {
+      //   'ubuntu': ['Ubuntu'],
+      // }
+    },
   },
   plugins: [],
 }
