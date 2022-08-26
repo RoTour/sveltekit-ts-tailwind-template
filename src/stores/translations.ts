@@ -3,6 +3,10 @@ import { writable } from 'svelte/store';
 const french = {
 	name: 'Robin TOURNÉ',
 	subtitle: 'Développeur web et Mentor',
+	topBar: {
+		theme: 'Theme',
+		language: 'Langue'
+	},
 	counters: {
 		so: {
 			counterTrollValue: 'Beaucoup trop',
@@ -23,6 +27,10 @@ const french = {
 const english = {
 	name: 'Robin TOURNÉ',
 	subtitle: 'Web developer and Mentor',
+	topBar: {
+		theme: 'Theme',
+		language: 'Language'
+	},
 	counters: {
 		so: {
 			counterTrollValue: 'A lot',
