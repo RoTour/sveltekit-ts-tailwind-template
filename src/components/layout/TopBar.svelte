@@ -3,21 +3,20 @@
 	import { clickOutside } from '../../directives/click-outside';
 	import { Themes,setTheme } from '../../stores/theme';
 
-	let selectThemeOpened = true;
+	let selectThemeOpened = false;
 
 	const openSelector = () => {
 		selectThemeOpened = true;
 	};
 
-	const closeSelector = (event) => {
-		console.log('clicked outside', event);
+	const closeSelector = () => {
 		selectThemeOpened = false;
 	};
 
 </script>
 
 <div class="w-full flex p-4 gap-4">
-  <div class="flex-1">Hola</div>
+  <div class="flex-1"></div>
   <div class="flex flex-1 justify-end cursor-pointer">
     <div class="flex gap-2 relative" on:click={() => openSelector()}>
       <ColorPalette/>

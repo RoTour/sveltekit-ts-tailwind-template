@@ -12,9 +12,13 @@ module.exports = {
         'primary-text': 'var(--color-text-primary)',
         'secondary-text': 'var(--color-text-secondary)',
       },
-      // fontFamily: {
-      //   'ubuntu': ['Ubuntu'],
-      // }
+      height: {
+        'screen-minus-topbar': 'calc(100vh - 3rem)'
+      },
+      fontFamily: {
+        'ubuntu': ['ubuntu'],
+        'ubuntu-bold': ['ubuntu-bold'],
+      }
     },
   },
   plugins: [],

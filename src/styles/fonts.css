@@ -1,0 +1,12 @@
+@font-face {
+  font-family: ubuntu;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/ubuntu/Ubuntu-Regular.ttf");
+}
+@font-face {
+  font-family: ubuntu-bold;
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/ubuntu/Ubuntu-Bold.ttf");
+}

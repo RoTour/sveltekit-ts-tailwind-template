@@ -15,13 +15,6 @@
   }
 }
 
-@font-face {
-  font-family: ubuntu;
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/ubuntu/Ubuntu-Regular.ttf");
-}
-
 * {
   font-family: ubuntu, sans-serif;
   box-sizing: border-box;
