@@ -18,6 +18,11 @@ module.exports = {
       fontFamily: {
         'ubuntu': ['ubuntu'],
         'ubuntu-bold': ['ubuntu-bold'],
+        'poppins-bold': ['poppins-bold'],
+        'poppins-medium': ['poppins-medium'],
+        'poppins-regular': ['poppins-regular'],
+        'poppins-light': ['poppins-light'],
+        'popins-thin': ['poppins-thin'],
       }
     },
   },

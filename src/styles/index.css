@@ -8,14 +8,14 @@
   }
 
   :root {
-    --color-primary: #4ade80;
-    --color-secondary: #fffffe;
+    --color-primary: #6DFCA1;
+    --color-secondary: #46D0EB;
     --color-text-primary: #fffffe;
     --color-text-secondary: #000000;
   }
 }
 
 * {
-  font-family: ubuntu, sans-serif;
+  font-family: Poppins-regular, ubuntu, sans-serif;
   box-sizing: border-box;
 }
