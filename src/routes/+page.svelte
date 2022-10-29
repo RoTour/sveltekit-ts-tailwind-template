@@ -1,6 +1,7 @@
 <script lang="ts">
 	import SecondaryBtn from '@components/buttons/SecondaryBtn.svelte';
 	import BgDecoration from '@components/background/BgDecoration.svelte';
+	import { goto } from '$app/navigation';
 	import { tweened } from 'svelte/motion';
 	import { backIn } from 'svelte/easing';
 	import { onMount } from 'svelte';
@@ -12,16 +13,20 @@
 
 	let bodyRef;
 
-	const animateExit = () => {
-		topDecorationX.set(-150);
-		bottomDecorationX.set(150);
-		mainMenuOpacity.set(0);
-		mainMenuScale.set(1.5);
+	const animateExit = (redirect: string) => {
+		Promise.all([
+			topDecorationX.set(-150),
+			bottomDecorationX.set(150),
+			mainMenuOpacity.set(0),
+			mainMenuScale.set(1.5),
+		]).then(() => {
+			goto(redirect);
+		});
 	};
 
-  onMount(() => {
-			document.body.style.overflow = 'hidden';
-  })
+	onMount(() => {
+		document.body.style.overflow = 'hidden';
+	});
 
 </script>
 
@@ -32,7 +37,8 @@
               translateX={`${$bottomDecorationX}%`}/>
 
 
-<section class="h-screen flex flex-col justify-center" style={`opacity: ${$mainMenuOpacity}; transform: scale(${$mainMenuScale})`}>
+<section class="h-screen flex flex-col justify-center"
+         style={`opacity: ${$mainMenuOpacity}; transform: scale(${$mainMenuScale})`}>
   <h1
     class="w-max mx-auto text-6xl text-center text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary to-secondary mb-8">
     <span class="font-poppins-bold">Ro</span>
@@ -41,9 +47,9 @@
   </h1>
 
   <div class="w-full p-4 md:w-1/2 lg:w-1/3 mx-auto grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4 ">
-    <SecondaryBtn onClick={animateExit}>(🔨WIP) Projects</SecondaryBtn>
-    <SecondaryBtn>(🔨WIP) Components</SecondaryBtn>
-    <SecondaryBtn>(🔨WIP) Labs</SecondaryBtn>
+    <SecondaryBtn onClick={() => animateExit('/projects')}>(🔨WIP) Projects</SecondaryBtn>
+    <SecondaryBtn onClick={() => animateExit('/components')}>(🔨WIP) Components</SecondaryBtn>
+    <SecondaryBtn onClick={() => animateExit('/labs')}>(🔨WIP) Labs</SecondaryBtn>
     <SecondaryBtn onClick={() => console.log(bodyRef)}>(🔨WIP) Testing</SecondaryBtn>
   </div>
 </section>
